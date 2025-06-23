@@ -2,7 +2,7 @@
   "name": "portafolio-brogramadores",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http:/Brogramadores.github.io/sobre-nosotros/portafolio-brogramadores",
+  "homepage": "http://brogramadores.github.io/sobre-nosotros",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
