@@ -2,7 +2,7 @@
   "name": "portafolio-brogramadores",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://brogramadores.github.io/sobre-nosotros",
+  "homepage": "http:/GitRaFaeLL.github.io/sobre-nosotros",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -16,7 +16,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
