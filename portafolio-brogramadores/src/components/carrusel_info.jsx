@@ -7,7 +7,7 @@ import Imagen1 from '../img/Brogramadores.jpg';
 import Rafael from '../img/Rafael.jpg';
 import Esau from '../img/Esau.jpg';
 
-function Carrusel_Info() {
+function CarruselInfo() {
     return(
         <div className="container mt-5">
             <div id="miCarrusel" className="carousel slide" data-bs-ride="carousel">
@@ -86,4 +86,4 @@ function Carrusel_Info() {
     );
 }
 
-export default Carrusel_Info;
+export default CarruselInfo;
