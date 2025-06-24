@@ -1,15 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
-import CarouselSkills from './components/Carousel-Skills';
+
+import Carrusel_Info from './components/carrusel_info';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+
+      <Carrusel_Info/>
       
-      <CarouselSkills />
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -24,6 +28,7 @@ function App() {
           Learn React
         </a>
       </header>
+      
     </div>
   );
 }
