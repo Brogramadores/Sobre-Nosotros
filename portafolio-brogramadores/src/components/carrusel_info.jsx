@@ -2,7 +2,6 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-// IMPORTA las imágenes correctamente - NO uses strings con rutas
 import Imagen1 from '../img/Brogramadores.jpg';
 import Rafael from '../img/Rafael.jpg';
 import Esau from '../img/Esau.jpg';

@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/navbar';
 import CarruselInfo from './components/carrusel_info';
 import CarouselSkills from './components/Carousel-Skills';
+import Servicios from './components/servicios_bro';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <CarruselInfo/>
       <CarouselSkills/>
+      <Servicios/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
