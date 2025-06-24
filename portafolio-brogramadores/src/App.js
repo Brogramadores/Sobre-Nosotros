@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
+
 import Carrusel_Info from './components/carrusel_info';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -9,8 +10,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+
       <Carrusel_Info/>
       
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
