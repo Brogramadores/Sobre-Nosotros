@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import img from '../img/img.jsx';
+import styles from '../Styles/Navbar.module.css';
 
 function Navbar() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -8,13 +9,14 @@ function Navbar() {
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
-
+// ${styles.navbarCustom}
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className={`${styles.navbarCustom}`}> 
+        <nav className={`navbar navbar-expand-lg`}>
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                    <img src={img.Brogramadores} alt="Logo" width="60" height="40" className="d-inline-block align-text-top" />
-                    Brogramadores
+                    <img src={img.Brogramadores} alt="Logo" width="65" height="45" className="d-inline-block align-text-top" />
+                       Brogramadores
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -42,13 +44,11 @@ function Navbar() {
                             </ul>
                         </li>
                     </ul>
-                    <form className="d-flex" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
+    </nav>
+    
     );
 }
 
