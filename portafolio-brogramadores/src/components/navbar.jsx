@@ -15,8 +15,7 @@ function Navbar() {
         <nav className={`navbar navbar-expand-lg`}>
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                    <img src={img.Brogramadores} alt="Logo" width="65" height="45" className="d-inline-block align-text-top" />
-                       Brogramadores
+                    <img src={img.Brogramadores} alt="Logo" width="85" height="55" className="d-inline-block align-text-top" />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -35,8 +34,8 @@ function Navbar() {
                                 aria-expanded={isDropdownOpen}
                             >
                                 Sobre Nosotros
-                            </a>
-                            <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
+                            </a> 
+                            <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : '' } `}>
                                 <li><a className="dropdown-item" href="#">Proyectos</a></li>
                                 <li><a className="dropdown-item" href="#">Redes Sociales</a></li>
                                 <li><hr className="dropdown-divider" /></li>
