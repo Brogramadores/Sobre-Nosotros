@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
-import CarruselInfo from './components/carrusel_info';
+import CarruselInfo from './components/Carousel-Info';
 import CarouselSkills from './components/Carousel-Skills';
-import Servicios from './components/servicios_bro';
+import Servicios from './components/Servicios-Bro';
 
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
         <section className='seccion-navbar'>
           <Navbar/>
         </section>
-        
         
         <section className="seccion-CarruselInfo">
           <CarruselInfo />

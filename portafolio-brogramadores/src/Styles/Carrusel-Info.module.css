@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap');
 
-h2 {
+.titulo {
     font-size: clamp(1.5rem, 4vw, 3rem);
     font-weight: 400;
     color: white;
@@ -13,7 +13,7 @@ h2 {
         0 0.125rem 0 #888;
 }
 
-.container {
+.contenedor {
     width: 100%;
     max-width: 75rem;
     margin: 0 auto;
@@ -22,7 +22,7 @@ h2 {
 }
 
 /* Carrusel principal */
-#miCarrusel {
+.miCarrusel {
     width: 100%;
     margin: 0;
     padding: 0 4rem;
@@ -30,7 +30,7 @@ h2 {
 }
 
 /* Contenedor principal del carrusel */
-.carousel-container {
+.carouselContainer {
     height: 400px;
     width: 100%;
     margin: 0;
@@ -38,7 +38,7 @@ h2 {
 }
 
 /* Carousel items */
-.carousel-item {
+.carouselItem {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -46,7 +46,7 @@ h2 {
 }
 
 /* Contenedor de las cards del carrusel */
-.carousel-card-container {
+.carouselCardContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@ h2 {
 }
 
 /* Card personalizada */
-.custom-card {
+.customCard {
     display: flex;
     width: 100%;
     height: 100%;
@@ -71,7 +71,7 @@ h2 {
 }
 
 /* Sección de imagen de la card */
-.card-image-section {
+.cardImageSection {
     flex: 0 0 40%;
     height: 100%;
     background-color: #f8f9fa;
@@ -85,7 +85,7 @@ h2 {
 }
 
 /* Imagen dentro de la card - FIJO PRINCIPAL */
-.card-image {
+.cardImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -95,7 +95,7 @@ h2 {
 }
 
 /* Sección de contenido de la card */
-.card-content-section {
+.cardContentSection {
     flex: 1;
     padding: 1.5rem;
     display: flex;
@@ -108,7 +108,7 @@ h2 {
 }
 
 /* Título de la card */
-.card-title {
+.cardTitle {
     margin-bottom: 1rem;
     font-size: 1.25rem;
     font-weight: 500;
@@ -117,25 +117,25 @@ h2 {
 }
 
 /* Texto de la card */
-.card-text {
+.cardText {
     margin-bottom: 0.75rem;
     color: #6c757d;
     line-height: 1.5;
     font-size: 0.95rem;
 }
 
-.card-text:last-child {
+.cardText:last-child {
     margin-bottom: 0;
 }
 
 /* Texto pequeño */
-.text-muted {
+.textMuted {
     color: #6c757d !important;
 }
 
 /* CONTROLES DEL CARRUSEL */
-.carousel-control-prev,
-.carousel-control-next {
+.carouselControlPrev,
+.carouselControlNext {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -155,16 +155,16 @@ h2 {
     opacity: 0.9;
 }
 
-.carousel-control-prev {
+.carouselControlPrev {
     left: -50px;
 }
 
-.carousel-control-next {
+.carouselControlNext {
     right: -50px;
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
+.carouselControlPrev:hover,
+.carouselControlNext:hover {
     background: white;
     color: #000;
     opacity: 1;
@@ -173,26 +173,26 @@ h2 {
 }
 
 /* Ocultar iconos por defecto de Bootstrap */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+.carouselControlPrev :global(.carousel-control-prev-icon),
+.carouselControlNext :global(.carousel-control-next-icon) {
     display: none;
 }
 
 /* Agregar contenido personalizado a los controles */
-.carousel-control-prev::before {
+.carouselControlPrev::before {
     content: "❮";
     font-size: 20px;
     font-weight: bold;
 }
 
-.carousel-control-next::before {
+.carouselControlNext::before {
     content: "❯";
     font-size: 20px;
     font-weight: bold;
 }
 
 /* INDICADORES DEL CARRUSEL */
-.carousel-indicators {
+.carouselIndicators {
     position: absolute;
     bottom: -50px;
     left: 50%;
@@ -206,7 +206,7 @@ h2 {
     list-style: none;
 }
 
-.carousel-indicators button {
+.carouselIndicators button {
     width: 12px;
     height: 12px;
     background-color: rgba(255, 255, 255, 0.5);
@@ -217,20 +217,20 @@ h2 {
     opacity: 0.7;
 }
 
-.carousel-indicators button:hover {
+.carouselIndicators button:hover {
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.8);
     transform: scale(1.2);
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-.carousel-indicators button.active {
+.carouselIndicators button.active {
     background-color: #333;
     opacity: 1;
     transform: scale(1.1);
 }
 
-.carousel-indicators button:focus {
+.carouselIndicators button:focus {
     outline: none;
 }
 
@@ -238,151 +238,151 @@ h2 {
 
 /* Tablets grandes (1024px y menos) */
 @media (max-width: 1024px) {
-    #miCarrusel {
+    .miCarrusel {
         padding: 0 3rem;
     }
     
-    .carousel-container {
+    .carouselContainer {
         height: 350px;
     }
     
-    .card-image-section {
+    .cardImageSection {
         flex: 0 0 35%;
     }
     
-    .card-content-section {
+    .cardContentSection {
         padding: 1.25rem;
     }
     
-    .card-title {
+    .cardTitle {
         font-size: 1.15rem;
     }
     
-    .card-text {
+    .cardText {
         font-size: 0.9rem;
     }
 }
 
 /* Tablets (768px y menos) - CAMBIO A VERTICAL */
 @media (max-width: 768px) {
-    #miCarrusel {
+    .miCarrusel {
         padding: 0 2rem;
     }
     
-    .carousel-container {
+    .carouselContainer {
         height: 450px;
     }
     
-    .custom-card {
+    .customCard {
         flex-direction: column;
     }
     
-    .card-image-section {
+    .cardImageSection {
         flex: 0 0 50%;
         width: 100%;
         height: 50%;
     }
     
-    .card-content-section {
+    .cardContentSection {
         flex: 1;
         height: 50%;
         padding: 1rem;
     }
     
-    .card-title {
+    .cardTitle {
         font-size: 1.1rem;
         margin-bottom: 0.75rem;
     }
     
-    .card-text {
+    .cardText {
         font-size: 0.85rem;
         margin-bottom: 0.5rem;
     }
     
     /* Controles más pequeños en tablets */
-    .carousel-control-prev,
-    .carousel-control-next {
+    .carouselControlPrev,
+    .carouselControlNext {
         width: 35px;
         height: 35px;
         font-size: 16px;
     }
     
-    .carousel-control-prev {
+    .carouselControlPrev {
         left: -40px;
     }
     
-    .carousel-control-next {
+    .carouselControlNext {
         right: -40px;
     }
     
-    .carousel-indicators {
+    .carouselIndicators {
         bottom: -40px;
     }
 }
 
 /* Móviles grandes (480px y menos) */
 @media (max-width: 480px) {
-    .container {
+    .contenedor {
         padding: 0.5rem;
     }
     
-    #miCarrusel {
+    .miCarrusel {
         padding: 0 1.5rem;
     }
     
-    .carousel-container {
+    .carouselContainer {
         height: 400px;
     }
     
-    .card-image-section {
+    .cardImageSection {
         flex: 0 0 45%;
         height: 45%;
     }
     
-    .card-content-section {
+    .cardContentSection {
         height: 55%;
         padding: 0.75rem;
     }
     
-    .card-title {
+    .cardTitle {
         font-size: 1rem;
         margin-bottom: 0.5rem;
         line-height: 1.2;
     }
     
-    .card-text {
+    .cardText {
         font-size: 0.8rem;
         line-height: 1.4;
         margin-bottom: 0.4rem;
     }
     
     /* Controles adaptados para móviles */
-    .carousel-control-prev,
-    .carousel-control-next {
+    .carouselControlPrev,
+    .carouselControlNext {
         width: 30px;
         height: 30px;
         font-size: 14px;
     }
     
-    .carousel-control-prev {
+    .carouselControlPrev {
         left: -35px;
     }
     
-    .carousel-control-next {
+    .carouselControlNext {
         right: -35px;
     }
     
-    .carousel-control-prev::before,
-    .carousel-control-next::before {
+    .carouselControlPrev::before,
+    .carouselControlNext::before {
         font-size: 16px;
     }
     
-    .carousel-indicators {
+    .carouselIndicators {
         bottom: -35px;
         gap: 8px;
     }
     
-    .carousel-indicators button {
+    .carouselIndicators button {
         width: 10px;
         height: 10px;
     }
@@ -390,83 +390,83 @@ h2 {
 
 /* Móviles pequeños (360px y menos) */
 @media (max-width: 360px) {
-    #miCarrusel {
+    .miCarrusel {
         padding: 0 1rem;
     }
     
-    .carousel-container {
+    .carouselContainer {
         height: 350px;
     }
     
-    .card-content-section {
+    .cardContentSection {
         padding: 0.5rem;
     }
     
-    .card-title {
+    .cardTitle {
         font-size: 0.95rem;
     }
     
-    .card-text {
+    .cardText {
         font-size: 0.75rem;
     }
     
     /* Controles mínimos para pantallas muy pequeñas */
-    .carousel-control-prev,
-    .carousel-control-next {
+    .carouselControlPrev,
+    .carouselControlNext {
         width: 28px;
         height: 28px;
         font-size: 12px;
     }
     
-    .carousel-control-prev {
+    .carouselControlPrev {
         left: -30px;
     }
     
-    .carousel-control-next {
+    .carouselControlNext {
         right: -30px;
     }
 }
 
 /* Pantallas muy anchas */
 @media (min-width: 1400px) {
-    .carousel-container {
+    .carouselContainer {
         height: 450px;
     }
     
-    #miCarrusel {
+    .miCarrusel {
         padding: 0 5rem;
     }
     
-    .card-content-section {
+    .cardContentSection {
         padding: 2rem;
     }
     
-    .card-title {
+    .cardTitle {
         font-size: 1.5rem;
     }
     
-    .card-text {
+    .cardText {
         font-size: 1rem;
     }
 }
 
 /* Orientación horizontal en móviles */
 @media (max-height: 500px) and (orientation: landscape) {
-    .carousel-container {
+    .carouselContainer {
         height: 300px;
     }
     
-    .card-content-section {
+    .cardContentSection {
         padding: 0.75rem;
     }
     
-    .card-title {
+    .cardTitle {
         font-size: 0.9rem;
         margin-bottom: 0.5rem;
         line-height: 1.1;
     }
     
-    .card-text {
+    .cardText {
         font-size: 0.75rem;
         line-height: 1.3;
         margin-bottom: 0.3rem;
