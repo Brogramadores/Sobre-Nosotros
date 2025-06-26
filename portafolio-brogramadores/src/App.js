@@ -11,7 +11,10 @@ function App() {
     <div className="App">
       <div className='contenedor-principal'>
         
-        <Navbar/>
+        <section className='seccion-navbar'>
+          <Navbar/>
+        </section>
+        
         
         <section className="seccion-CarruselInfo">
           <CarruselInfo />
