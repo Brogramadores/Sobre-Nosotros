@@ -1,20 +1,41 @@
-.navbarCustom{
-
-    background-color: rgb(27, 182, 133);
-    padding: 1px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+.navbarCustom {
+  background-color: rgb(27, 182, 133);
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.Dropdown {
-    background-color: rgb(9, 158, 111);
-
+/* Global Bootstrap overrides */
+:global(.dropdown-menu) {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.Dchild{
-    background-color: rgb(4, 121, 84) !important;
-    text-decoration: solid !important;
+:global(.dropdown-item) {
+  color: #333;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+:global(.dropdown-item:hover),
+:global(.dropdown-item:focus) {
+  background-color: rgb(27, 182, 133);
+  color: white;
+}
+
+:global(.nav-link) {
+  font-weight: 500;
+  color: white !important;
+}
+
+:global(.nav-link:hover),
+:global(.nav-link:focus) {
+  color: #dff6f2 !important;
 }
