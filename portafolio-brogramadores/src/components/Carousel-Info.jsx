@@ -1,40 +1,39 @@
 import React, { useEffect, useState, useRef } from "react";
 import styles from '../Styles/Carrusel-Info.module.css';
-
 import Imagen1 from '../img/Brogramadores.jpg';
 import Rafael from '../img/Rafael.jpg';
 import Esau from '../img/Esau.jpg';
 
 function CarruselInfo() {
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(1);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const carouselTrackRef = useRef(null);
     const autoPlayIntervalRef = useRef(null);
     
-    // Datos del equipo
+    // Datos del equipo REORDENADOS - Rafael ahora es el primero (centro/principal)
     const teamData = [
-        {
-            id: 'team',
-            image: Imagen1,
-            title: 'Brogramadores',
-            description: 'Somos un equipo innovador de desarrolladores comprometidos con la excelencia tecnológica. Creamos experiencias digitales extraordinarias que transforman ideas en realidades funcionales, utilizando las tecnologías más avanzadas y metodologías ágiles.',
-            subtitle: 'Equipo de Desarrollo',
-            gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-        },
         {
             id: 'rafael',
             image: Rafael,
             title: 'Rafael Martinez Verdin',
-            description: 'Arquitecto de soluciones digitales con dominio en el ecosistema completo de desarrollo. Especialista en React, Node.js, arquitecturas de microservicios y optimización de rendimiento. Líder técnico apasionado por la innovación y la calidad del código.',
-            subtitle: 'Desarrollador Full Stack Senior',
+            description: 'Ingeniero recién egresado de la Universidad Politécnica de Aguascalientes, con sólidos conocimientos en programación estructurada y orientada a objetos. Experiencia en diseño y manejo de bases de datos, fundamentos de redes y conceptos básicos de ciberseguridad. Capacitado en desarrollo web y móvil, utilizando diversos frameworks modernos para crear soluciones eficientes y adaptables. Apasionado por el aprendizaje continuo y enfocado en aportar valor en proyectos de tecnología y software.',
+            subtitle: 'Ingeniero en Sistemas Computacionales',
             gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+        },
+        {
+            id: 'team',
+            image: Imagen1,
+            title: 'Brogramadores',
+            description: '2 amigos apasionados por la tecnología y el desarrollo. Unidos por el deseo de aprender continuamente y crecer profesionalmente, trabajamos juntos para crear experiencias digitales innovadoras que convierten ideas en soluciones reales y funcionales. Nos comprometemos con la excelencia tecnológica, empleando las mejores prácticas, tecnologías actuales y metodologías ágiles para entregar proyectos de calidad.',
+            subtitle: 'Equipo de Desarrollo & Innovación Freelance',
+            gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
         },
         {
             id: 'esau',
             image: Esau,
             title: 'Jose Esau Tovar Cruz',
-            description: 'Experto en desarrollo frontend y experiencia de usuario con enfoque en accesibilidad y rendimiento. Dominio avanzado de JavaScript moderno, CSS Grid/Flexbox, y frameworks de última generación. Creador de interfaces elegantes y funcionales.',
-            subtitle: 'Desarrollador Frontend Especialista',
+            description: 'Recién egresado de la Universidad Autónoma de Aguascalientes, con conocimientos en programación estructurada y orientada a objetos. Manejo de bases de datos, fundamentos de redes y nociones en ciberseguridad. Experiencia en desarrollo web y móvil, apoyado en frameworks actuales para la creación de aplicaciones funcionales y eficientes. Motivado para enfrentar nuevos retos y crecer profesionalmente en el ámbito del desarrollo de software.',
+            subtitle: 'Ingeniero en Sistemas Computacionales',
             gradient: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
         }
     ];
@@ -256,12 +255,13 @@ function CarruselInfo() {
             {/* Información adicional del equipo */}
             <div className={styles.teamInfo}>
                 <h3 className={styles.teamInfoTitle}>
-                    Nuestro Compromiso
+                    Nuestro Compromiso con la Excelencia
                 </h3>
                 <p className={styles.teamInfoText}>
-                    Combinamos creatividad, tecnología y experiencia para entregar soluciones 
-                    que superen las expectativas. Cada proyecto es una oportunidad para innovar 
-                    y crear valor duradero.
+                    Como equipo de desarrollo de élite, combinamos creatividad, tecnología de vanguardia 
+                    y años de experiencia para entregar soluciones que no solo cumplen, sino que superan 
+                    las expectativas más exigentes. Cada línea de código es una oportunidad para innovar 
+                    y crear valor duradero para nuestros clientes.
                 </p>
                 
                 {/* Controles de autoplay */}
