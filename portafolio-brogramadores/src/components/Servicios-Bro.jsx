@@ -1,63 +1,61 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import styles from '../Styles/ServiciosBro.module.css';
 
 function Servicios() {
-    return (
-        <section className="experiencia seccion-clara">
-            <div className="container text-center">
-                <div className="row">
-                    {/* Conocimientos */}
-                    <div className="columna col-12 col-md-4">
-                        <i className="bi bi-cpu"></i>
-                        <p className="experiencia-titulo">Desarrollo Web</p>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto doloribus, sit esse
-                            repudiandae qui sint ipsum rerum deserunt tempore dolorem unde quidem, consectetur possimus
-                            consequatur obcaecati in iste non commodi.
-                        </p>
-                        <div className="badges-contenedor">
-                            <span className="badge text-bg-primary">Paginas Web</span>
-                            <span className="badge text-bg-primary">Aplicaciones Web</span>
-                            <span className="badge text-bg-primary">Sitios Web</span>
-                            <span className="badge text-bg-primary">Plataformas</span>
-                        </div>
-                    </div>
-                    
-                    {/* Cursos Hechos */}
-                    <div className="columna col-12 col-md-4">
-                        <i className="bi bi-cpu"></i>
-                        <p className="experiencia-titulo">Desarrollo de Software</p>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto doloribus, sit esse
-                            repudiandae qui sint ipsum rerum deserunt tempore dolorem unde quidem, consectetur possimus
-                            consequatur obcaecati in iste non commodi.
-                        </p>
-                        <div className="badges-contenedor">
-                            <span className="badge text-bg-primary">Programas de Escritorio</span>
-                            <span className="badge text-bg-primary">Aplicaciones Moviles</span>
-                        </div>
-                    </div>
-                    
-                    {/* Experiencia */}
-                    <div className="columna col-12 col-md-4">
-                        <i className="bi bi-cpu"></i>
-                        <p className="experiencia-titulo">Consultoria</p>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto doloribus, sit esse
-                            repudiandae qui sint ipsum rerum deserunt tempore dolorem unde quidem, consectetur possimus
-                            consequatur obcaecati in iste non commodi.
-                        </p>
-                        <div className="badges-contenedor">
-                            <span className="badge text-bg-primary">Levantamiento de Requerimientos</span>
-                            <span className="badge text-bg-primary">Entrevistas</span>
-                            <span className="badge text-bg-primary">Mantenimiento</span>
-                        </div>
-                    </div>
+  const servicios = [
+    {
+      icono: "bi-globe",
+      titulo: "Desarrollo Web",
+      descripcion:
+        "Creamos sitios web responsivos, seguros y optimizados para todo tipo de dispositivos.",
+      badges: ["Páginas Web", "Aplicaciones Web", "Sitios Responsivos", "Plataformas"],
+    },
+    {
+      icono: "bi-phone",
+      titulo: "Desarrollo de Software",
+      descripcion:
+        "Desarrollamos software a la medida: desde apps móviles hasta sistemas de escritorio.",
+      badges: ["Programas de Escritorio", "Aplicaciones Móviles", "APIs"],
+    },
+    {
+      icono: "bi-person-check",
+      titulo: "Consultoría TI",
+      descripcion:
+        "Asesoramos en implementación tecnológica, análisis de requerimientos y mantenimiento.",
+      badges: ["Levantamiento de Requerimientos", "Entrevistas", "Mantenimiento"],
+    },
+  ];
+
+  return (
+    <section className="py-5" style={{ background: 'linear-gradient(135deg,rgb(161, 230, 239),rgb(163, 224, 168))' }}>
+      <div className="container text-center">
+        <h2 className="mb-5 text-primary fw-bold">Servicios que Ofrecemos</h2>
+        <div className="row">
+          {servicios.map((servicio, idx) => (
+            <div className="col-12 col-md-4 mb-4" key={idx}>
+              <div className={`card h-100 ${styles.cardAnimada}`}>
+                <div className="card-body">
+                  <div className={`${styles.iconoServicio} mb-3 text-success`}>
+                    <i className={`bi ${servicio.icono}`}></i>
+                  </div>
+                  <h5 className="card-title text-dark fw-bold">{servicio.titulo}</h5>
+                  <p className="card-text text-muted">{servicio.descripcion}</p>
+                  <div className="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                    {servicio.badges.map((badge, i) => (
+                      <span className="badge bg-success-subtle text-success border border-success" key={i}>
+                        {badge}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Servicios;
