@@ -1,0 +1,22 @@
+.proyecto {
+  overflow: hidden;
+}
+
+.proyecto img {
+  transition: transform 0.3s ease;
+}
+
+.proyecto:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.proyecto:hover .overlay {
+  opacity: 1;
+  color: white;
+}

@@ -4,6 +4,7 @@ import Navbar from './components/navbar';
 import CarruselInfo from './components/Carousel-Info';
 import CarouselSkills from './components/Carousel-Skills';
 import Servicios from './components/Servicios-Bro';
+import ProyectosBro from './components/Proyectos-Bro';
 
 
 function App() {
@@ -23,7 +24,14 @@ function App() {
           <CarouselSkills />
         </section>
 
-        <Servicios />
+        <section className='seccion-Servicios'>
+          <Servicios />
+        </section>
+
+        <section className='seccion-Proyectos'>
+          <ProyectosBro />  
+        </section>
+        
 
 
         <header className="App-header">

@@ -91,6 +91,7 @@ body {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    border-radius: 20px;
 }
 
 /* Carrusel principal */
@@ -105,7 +106,7 @@ body {
     box-shadow: var(--shadow-light);
     border: 1px solid rgba(255, 255, 255, 0.2);
     /* Añadimos espacio inferior para los indicadores */
-    margin-bottom: clamp(60px, 12vw, 80px);
+    margin-bottom: clamp(55px, 12vw, 80px);
 }
 
 /* Contenedor principal del carrusel */
@@ -394,7 +395,7 @@ body {
 /* INDICADORES DEL CARRUSEL - SOLUCIONADO SOBREPOSICIÓN */
 .carouselIndicators {
     position: absolute;
-    bottom: clamp(-45px, -8vw, -60px);
+    bottom: clamp(-55px, -8vw, -60px);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -444,7 +445,7 @@ body {
 
 /* Información adicional */
 .teamInfo {
-    margin-top: clamp(1.5rem, 4vw, 4rem);
+    margin-top: clamp(1.5rem, 4vw, 1.5rem);
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
