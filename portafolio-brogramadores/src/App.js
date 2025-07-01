@@ -5,6 +5,7 @@ import CarruselInfo from './components/Carousel-Info';
 import CarouselSkills from './components/Carousel-Skills';
 import Servicios from './components/Servicios-Bro';
 import ProyectosBro from './components/Proyectos-Bro';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
           <ProyectosBro />  
         </section>
         
+        <section className='seccion-Footer'>
+          <Footer />
+        </section>
 
 
         <header className="App-header">
