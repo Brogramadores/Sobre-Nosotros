@@ -33,9 +33,9 @@ function App() {
           <ProyectosBro />  
         </section>
         
-        <section className='seccion-Footer'>
+        
           <Footer />
-        </section>
+        
 
 
         <header className="App-header">
