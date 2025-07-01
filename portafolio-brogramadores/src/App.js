@@ -30,11 +30,11 @@ function App() {
         </section>
 
         <section className='seccion-Proyectos'>
-          <ProyectosBro />  
+          <ProyectosBro/>  
         </section>
         
         
-          <Footer />
+        <Footer />
         
 
 
