@@ -12,46 +12,21 @@ function App() {
   return (
     <div className="App">
       <div className='contenedor-principal'>
-        
-        <section className='seccion-navbar'>
+        <header className='header-navbar'>
           <Navbar/>
-        </section>
+        </header>
         
         <section className="seccion-CarruselInfo">
-          <CarruselInfo />
+          <CarruselInfo/>
         </section>
 
         <section className='seccion-CarouselSkills'>
-          <CarouselSkills />
-        </section>
-
-        <section className='seccion-Servicios'>
-          <Servicios />
-        </section>
-
-        <section className='seccion-Proyectos'>
-          <ProyectosBro/>  
+          <CarouselSkills/>
         </section>
         
-        
-        <Footer />
-        
-
-
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Servicios/>
+        <ProyectosBro/>
+        <Footer/>
       </div>
     </div>
   );
