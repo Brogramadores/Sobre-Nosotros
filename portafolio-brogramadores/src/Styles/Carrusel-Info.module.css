@@ -82,7 +82,6 @@ body {
 
 .contenedor {
     width: 100%;
-    max-width: min(90rem, 95vw);
     margin: 0 auto;
     padding: var(--container-padding);
     background: var(--bg-gradient);
@@ -91,7 +90,7 @@ body {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    border-radius: 20px;
+    
 }
 
 /* Carrusel principal */
