@@ -74,10 +74,11 @@ function Navbar() {
                 </li>
                 <li><hr className="dropdown-divider" /></li>
                 <li>
-                  <a className="dropdown-item" href="#contacto" onClick={(e) => { e.preventDefault(); scrollToSection('contacto'); }}>
+                  <Link className="dropdown-item" to="/contactanos">
                     Contáctanos
-                  </a>
+                  </Link>
                 </li>
+
               </ul>
             </li>
           </ul>

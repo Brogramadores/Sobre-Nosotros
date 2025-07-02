@@ -1,5 +1,4 @@
-/* Estilos específicos para la página Home */
-.home {
+.Contactanos {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
@@ -20,10 +19,6 @@
   justify-content: center;
 }
 
-.seccionCarruselInfo {
-  padding-top: 80px;
-}
-
-.seccionCarouselSkills {
-  padding: 10px 40px 10px 40px;
+.seccionPrincipal {
+  padding-top: 1px;
 }
