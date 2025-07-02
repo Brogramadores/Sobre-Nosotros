@@ -1,34 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './components/navbar';
-import CarruselInfo from './components/Carousel-Info';
-import CarouselSkills from './components/Carousel-Skills';
-import Servicios from './components/Servicios-Bro';
-import ProyectosBro from './components/Proyectos-Bro';
-import Footer from './components/Footer';
-
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <div className='contenedor-principal'>
-        <header className='header-navbar'>
-          <Navbar/>
-        </header>
-        
-        <section className="seccion-CarruselInfo">
-          <CarruselInfo/>
-        </section>
-
-        <section className='seccion-CarouselSkills'>
-          <CarouselSkills/>
-        </section>
-        
-        <Servicios/>
-        <ProyectosBro/>
-        <Footer/>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* Redirecciona cualquier ruta no definida hacia Home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
