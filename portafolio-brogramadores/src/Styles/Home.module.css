@@ -1,0 +1,31 @@
+/* Styles/Home.module.css */
+
+/* Estilos específicos para la página Home */
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #005F6B;
+}
+
+.contenedorPrincipal {
+  width: 100%;
+}
+
+.headerNavbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.seccionCarruselInfo {
+  padding-top: 80px;
+}
+
+.seccionCarouselSkills {
+  padding: 10px 40px 10px 40px;
+}

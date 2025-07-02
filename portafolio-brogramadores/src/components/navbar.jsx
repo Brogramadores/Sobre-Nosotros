@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import img from '../img/img.jsx';
 import styles from '../Styles/Navbar.module.css';
@@ -10,10 +11,18 @@ function Navbar() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  // Función para scroll suave a las secciones
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav className={`navbar navbar-expand-lg ${styles.navbarCustom}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <img
             src={img.Brogramadores}
             alt="Logo"
@@ -21,7 +30,7 @@ function Navbar() {
             height="55"
             className="d-inline-block align-text-top"
           />
-        </a>
+        </Link>
 
         <button
           className="navbar-toggler"
@@ -38,7 +47,9 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="#">Inicio</a>
+              <a className="nav-link" href="#inicio" onClick={(e) => { e.preventDefault(); scrollToSection('inicio'); }}>
+                Inicio
+              </a>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -51,10 +62,22 @@ function Navbar() {
                 Sobre Nosotros
               </a>
               <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
-                <li><a className="dropdown-item" href="#">Proyectos</a></li>
-                <li><a className="dropdown-item" href="#">Redes Sociales</a></li>
+                <li>
+                  <a className="dropdown-item" href="#proyectos" onClick={(e) => { e.preventDefault(); scrollToSection('proyectos'); }}>
+                    Proyectos
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('skills'); }}>
+                    Habilidades
+                  </a>
+                </li>
                 <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#">Contáctanos</a></li>
+                <li>
+                  <a className="dropdown-item" href="#contacto" onClick={(e) => { e.preventDefault(); scrollToSection('contacto'); }}>
+                    Contáctanos
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>
