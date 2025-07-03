@@ -8,50 +8,46 @@ import proyecto3 from '../img/proyecto3.jpg';
 import proyecto4 from '../img/proyecto4.jpg';
 import proyecto5 from '../img/proyecto5.jpg';
 import proyecto6 from '../img/proyecto6.jpg';
+import construccion from '../img/construccion.png';
+import { Link } from 'react-router-dom';
 
 const ProyectosBro = () => {
   const projects = [
     {
       id: 1,
-      img: proyecto1,
-      title: 'Proyecto 1',
+      img: construccion,
+      title: 'Portafolio',
       github: 'https://github.com/Brogramadores',
-      icon: 'bi-filetype-java',
     },
     {
       id: 2,
-      img: proyecto2,
+      img: construccion,
       title: 'Proyecto 2',
       github: 'https://github.com/Brogramadores',
-      icon: 'bi-google-play',
     },
     {
       id: 3,
-      img: proyecto3,
+      img: construccion,
       title: 'Proyecto 3',
       github: 'https://github.com/Brogramadores',
-      icon: 'bi-hospital',
     },
     {
       id: 4,
-      img: proyecto4,
+      img: construccion,
       title: 'Proyecto 4',
       github: 'https://github.com/Brogramadores',
-      icon: 'bi-file-excel-fill',
     },
     {
       id: 5,
-      img: proyecto5,
+      img: construccion,
       title: 'Proyecto 5',
       github: 'https://github.com/Brogramadores',
-      icon: 'bi-file-earmark-word',
     },
     {
       id: 6,
-      img: proyecto6,
+      img: construccion,
       title: 'Proyecto 6',
       github: 'https://github.com/Brogramadores',
-      icon: 'bi-bootstrap',
     },
   ];
 
@@ -71,9 +67,6 @@ const ProyectosBro = () => {
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <i className="bi bi-github fs-3"></i>
                     </a>
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                      <i className={`bi ${project.icon} fs-3`}></i>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -81,11 +74,11 @@ const ProyectosBro = () => {
           ))}
         </div>
 
-        <a href="https://github.com/Brogramadores" target="_blank" rel="noopener noreferrer">
+        <Link to="/proyectos">
           <button type="button" className={`${styles.btnInfo} mt-4`}>
             Mas Proyectos <i className="bi bi-arrow-right-circle-fill"></i>
           </button>
-        </a>
+        </Link>
       </div>
     </section>
   );

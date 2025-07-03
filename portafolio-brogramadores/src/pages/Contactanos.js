@@ -209,7 +209,7 @@ function Contactanos() {
           </div>
         </section>
         
-        <footer id="contacto">
+        <footer id="FooterContacto">
           <Footer/>
         </footer>
       </div>

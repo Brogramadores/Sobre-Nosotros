@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Contactanos from './pages/Contactanos';
+import Proyectos from './pages/Proyectos';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contactanos" element={<Contactanos />} /> {/* Nueva ruta */}
+          <Route path="/proyectos" element={<Proyectos />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
