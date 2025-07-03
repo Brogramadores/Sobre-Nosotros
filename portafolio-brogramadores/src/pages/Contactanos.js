@@ -1,5 +1,3 @@
-// OPCIÓN 1: EmailJS (Envío directo desde React, sin backend)
-// Instalación: npm install @emailjs/browser
 
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
