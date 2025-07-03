@@ -1,24 +1,195 @@
+/* Contactanos.module.css */
+
+:root {
+  --color-primario: #2c3e94;
+  --color-secundario: #a8f1db;
+  --color-borde: #95bfc8;
+  --color-texto: #2c3e50;
+  --color-error: #e74c3c;
+  --color-exito: #27ae60;
+  --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .Contactanos {
+  font-family: var(--font-base);
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
   min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: #005F6B;
+  flex-direction: column;
 }
 
 .contenedorPrincipal {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .headerNavbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  z-index: 10;
 }
 
 .seccionPrincipal {
-  padding-top: 1px;
+  flex-grow: 1;
+  padding: 4rem 1.5rem;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.seccionPrincipal h1 {
+  font-size: 2.7rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-primario);
+}
+
+.seccionPrincipal p {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.formularioContainer {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(44, 62, 80, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.formularioContacto {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.seccionFormulario h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: var(--color-primario);
+  border-left: 4px solid var(--color-primario);
+  padding-left: 0.6rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: #555;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  background-color: #f9f9fc;
+  font-size: 1rem;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(44, 62, 148, 0.1);
+}
+
+.inputGroup textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.tipoContacto {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tipoContacto label {
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.tipoContacto input {
+  margin-right: 0.5rem;
+  accent-color: var(--color-primario);
+}
+
+.botonContainer {
+  text-align: center;
+}
+
+.botonEnviar {
+  background: linear-gradient(135deg, #2c3e94, #3543d1);
+  color: white;
+  border: none;
+  padding: 0.9rem 2.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(44, 62, 148, 0.3);
+  transition: all 0.3s ease;
+}
+
+.botonEnviar:hover {
+  background: linear-gradient(135deg, #3543d1, #2c3e94);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(44, 62, 148, 0.4);
+}
+
+.botonEnviar:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.mensajeExito,
+.mensajeError {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.mensajeExito {
+  background-color: #d4edda;
+  color: var(--color-exito);
+  border: 1px solid #c3e6cb;
+}
+
+.mensajeError {
+  background-color: #f8d7da;
+  color: var(--color-error);
+  border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 768px) {
+  .formularioContainer {
+    padding: 2rem;
+  }
+
+  .seccionPrincipal {
+    padding: 2rem 1rem;
+  }
+
+  .tipoContacto {
+    flex-direction: column;
+  }
+
+  .seccionPrincipal h1 {
+    font-size: 2.2rem;
+  }
 }
