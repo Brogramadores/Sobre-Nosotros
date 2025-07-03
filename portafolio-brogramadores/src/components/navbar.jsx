@@ -63,14 +63,14 @@ function Navbar() {
               </a>
               <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
                 <li>
-                  <a className="dropdown-item" href="#proyectos" onClick={(e) => { e.preventDefault(); scrollToSection('proyectos'); }}>
+                  <Link className="dropdown-item" to="/proyectos">
                     Proyectos
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('skills'); }}>
-                    Habilidades
-                  </a>
+                  <Link className="dropdown-item" to="/Redes Sociales">
+                    Redes Sociales
+                  </Link>
                 </li>
                 <li><hr className="dropdown-divider" /></li>
                 <li>
@@ -78,7 +78,6 @@ function Navbar() {
                     Contáctanos
                   </Link>
                 </li>
-
               </ul>
             </li>
           </ul>

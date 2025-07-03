@@ -16,7 +16,7 @@ function Contactanos() {
             <p>Estamos aquí para ayudarte. Si tienes alguna pregunta o necesitas más información, no dudes en ponerte en contacto con nosotros.</p>
         </section>
         
-        <footer id="contacto">
+        <footer id="FooterContacto">
           <Footer/>
         </footer>
       </div>
