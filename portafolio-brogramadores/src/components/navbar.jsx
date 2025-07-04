@@ -47,9 +47,18 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="#inicio" onClick={(e) => { e.preventDefault(); scrollToSection('inicio'); }}>
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={(e) => {
+                  if (window.location.pathname === '/') {
+                    e.preventDefault();
+                    scrollToSection('inicio');
+                  }
+                }}
+              >
                 Inicio
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -68,7 +77,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/Redes Sociales">
+                  <Link className="dropdown-item" to="/redes-sociales">
                     Redes Sociales
                   </Link>
                 </li>
