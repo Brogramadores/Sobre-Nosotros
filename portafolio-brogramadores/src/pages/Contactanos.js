@@ -82,6 +82,8 @@ function Contactanos() {
         </header>
         
         <section id="inicio" className={styles.seccionPrincipal}>
+          <br/>
+          <br/>
           <h1>¡Contáctanos!</h1>
           <p>Estamos aquí para ayudarte. Si tienes alguna pregunta o necesitas más información, no dudes en ponerte en contacto con nosotros.</p>
           
