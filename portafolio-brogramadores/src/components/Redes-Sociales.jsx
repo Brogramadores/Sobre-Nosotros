@@ -35,14 +35,58 @@ const RedesSociales = () => {
     },
     {
       id: 4,
-      nombre: 'GitHub',
+      nombre: 'GitHub-Brogramadores',
       icono: '🐙',
       color: '#333',
       url: 'https://github.com/brogramadores',
       descripcion: 'Explora nuestros proyectos para checar nuestra experiencia previa',
       seguidores: '892',
       tipo: 'Repositorio'
-    }
+    },
+    {
+      id: 5,
+      nombre: 'GitHub-Rafael Martinez Verdin',
+      icono: '🐙',
+      color: '#333',
+      url: 'https://github.com/GitRaFaeLL',
+      descripcion: 'Conoce a Rafael, un apasionado desarrollador con experiencia en aplicaciones web y móviles.',
+      seguidores: '892',
+      tipo: 'Repositorio Personal'
+    },
+    {
+      id: 6,
+      nombre: 'GitHub-Jose Esau Tovar Cruz',
+      icono: '🐙',
+      color: '#333',
+      url: 'https://github.com/JetceMx',
+      descripcion: 'Conoce a Esau, un miembro clave de nuestro equipo con experiencia en desarrollo web y móvil.',
+      seguidores: '892',
+      tipo: 'Repositorio Personal'
+    },
+    {
+      id: 7,
+      nombre: 'LinkedIn-Rafael Martinez Verdin',
+      icono: '🔗',
+      color: '#333',
+      url: 'https://www.linkedin.com/in/rafael-martinez-verdin-746166225/',
+      descripcion: 'Conecta con Rafael en LinkedIn para oportunidades profesionales y colaboraciones.',
+      seguidores: '892',
+      tipo: 'Contacto Profesional'
+    },
+    {
+      id: 8,
+      nombre: 'LinkedIn-Jose Esau Tovar Cruz',
+      icono: '🔗',
+      color: '#333',
+      url: 'https://www.linkedin.com/in/jose-esau-tovar-cruz-456b41351/',
+      descripcion: 'Conecta con Esau en LinkedIn para oportunidades profesionales y colaboraciones.',
+      seguidores: '892',
+      tipo: 'Contacto Profesional'
+    },
+
+    
+    
+    
   ];
 
   const handleCardClick = (url) => {
