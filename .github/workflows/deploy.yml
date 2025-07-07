@@ -3,25 +3,32 @@ name: Deploy React app to GitHub Pages
 on:
   push:
     branches:
-      - main # o la rama donde tengas el código principal
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: portafolio-brogramadores/package-lock.json
 
       - name: Install dependencies
         run: |
           cd portafolio-brogramadores
-          npm install
+          npm ci
 
       - name: Build project
         run: |
