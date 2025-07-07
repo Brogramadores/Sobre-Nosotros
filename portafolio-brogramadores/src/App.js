@@ -6,13 +6,18 @@ import Redes from './pages/Redes';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Sobre-Nosotros">
       <div className="App">
         <Routes>
+          {/* Ruta principal - Home */}
           <Route path="/" element={<Home />} />
-          <Route path="/contactanos" element={<Contactanos />} /> {/* Nueva ruta */}
+          
+          {/* Rutas secundarias */}
+          <Route path="/contactanos" element={<Contactanos />} />
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/redes-sociales" element={<Redes />} />
+          
+          {/* Fallback para rutas no encontradas (404) */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
