@@ -63,7 +63,6 @@ function Navbar() {
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
-                href="#"
                 role="button"
                 onClick={toggleDropdown}
                 aria-expanded={isDropdownOpen}

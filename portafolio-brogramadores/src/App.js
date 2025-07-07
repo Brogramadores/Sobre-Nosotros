@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Contactanos from './pages/Contactanos';
 import Proyectos from './pages/Proyectos';
@@ -6,7 +6,7 @@ import Redes from './pages/Redes';
 
 function App() {
   return (
-    <Router basename="/Sobre-Nosotros">
+    <Router>
       <div className="App">
         <Routes>
           {/* Ruta principal - Home */}
