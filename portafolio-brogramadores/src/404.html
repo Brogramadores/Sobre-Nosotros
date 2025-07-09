@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Brogramadores</title>
+    <script type="text/javascript">
+        // Redirige cualquier ruta no encontrada a /Sobre-Nosotros/
+        var l = window.location;
+        
+        // Si no está en el subdirectorio /Sobre-Nosotros/, redirige ahí
+        if (!l.pathname.startsWith('/Sobre-Nosotros')) {
+            l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/Sobre-Nosotros/');
+        } else {
+            // Si ya está en /Sobre-Nosotros/ pero es una ruta no encontrada, 
+            // redirige a /Sobre-Nosotros/#/
+            l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/Sobre-Nosotros/#/');
+        }
+    </script>
+</head>
+<body>
+    <p>Redirigiendo...</p>
+</body>
+</html>
