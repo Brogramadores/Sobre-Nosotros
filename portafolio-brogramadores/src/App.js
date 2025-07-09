@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          {/* Ruta principal - Home */}
+          {/* Ruta principal - muestra Home directamente */}
           <Route path="/" element={<Home />} />
           
           {/* Rutas secundarias */}
@@ -17,7 +17,7 @@ function App() {
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/redes-sociales" element={<Redes />} />
           
-          {/* Fallback para rutas no encontradas (404) */}
+          {/* Fallback para rutas no encontradas (404) - redirige a Home */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
