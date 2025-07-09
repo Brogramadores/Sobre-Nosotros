@@ -9,19 +9,16 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          {/* Ruta principal - redirige a Sobre-Nosotros */}
-          <Route path="/" element={<Navigate to="/Sobre-Nosotros" replace />} />
-          
-          {/* Ruta Sobre-Nosotros que muestra Home */}
-          <Route path="/Sobre-Nosotros" element={<Home />} />
+          {/* Ruta principal - muestra Home directamente */}
+          <Route path="/" element={<Home />} />
           
           {/* Rutas secundarias */}
           <Route path="/contactanos" element={<Contactanos />} />
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/redes-sociales" element={<Redes />} />
           
-          {/* Fallback para rutas no encontradas (404) - redirige a Sobre-Nosotros */}
-          <Route path="*" element={<Navigate to="/Sobre-Nosotros" replace />} />
+          {/* Fallback para rutas no encontradas (404) - redirige a Home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </Router>
