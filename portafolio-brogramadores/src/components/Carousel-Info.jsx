@@ -18,7 +18,7 @@ function CarruselInfo() {
             title: 'Rafael Martinez Verdin',
             description: 'Ingeniero recién egresado de la Universidad Politécnica de Aguascalientes, con sólidos conocimientos en programación estructurada y orientada a objetos. Experiencia en diseño y manejo de bases de datos, fundamentos de redes y conceptos básicos de ciberseguridad. Capacitado en desarrollo web y móvil, utilizando diversos frameworks modernos para crear soluciones eficientes y adaptables. Apasionado por el aprendizaje continuo y enfocado en aportar valor en proyectos de tecnología y software.',
             subtitle: 'Ingeniero en Sistemas Computacionales',
-            gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+            gradient: 'linear-gradient(135deg,rgb(156, 196, 225) 0%,rgb(123, 222, 164) 100%)'
         },
         {
             id: 'team',
@@ -26,7 +26,7 @@ function CarruselInfo() {
             title: 'Brogramadores',
             description: '2 amigos apasionados por la tecnología y el desarrollo. Unidos por el deseo de aprender continuamente y crecer profesionalmente, trabajamos juntos para crear experiencias digitales innovadoras que convierten ideas en soluciones reales y funcionales. Nos comprometemos con la excelencia tecnológica, empleando las mejores prácticas, tecnologías actuales y metodologías ágiles para entregar proyectos de calidad.',
             subtitle: 'Equipo de Desarrollo & Innovación Freelance',
-            gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+            gradient: 'linear-gradient(135deg,rgb(35, 182, 84) 0%,rgb(51, 31, 153) 100%)'
         },
         {
             id: 'esau',
@@ -34,7 +34,7 @@ function CarruselInfo() {
             title: 'Jose Esau Tovar Cruz',
             description: 'Recién egresado de la Universidad Autónoma de Aguascalientes, con conocimientos en programación estructurada y orientada a objetos. Manejo de bases de datos, fundamentos de redes y nociones en ciberseguridad. Experiencia en desarrollo web y móvil, apoyado en frameworks actuales para la creación de aplicaciones funcionales y eficientes. Motivado para enfrentar nuevos retos y crecer profesionalmente en el ámbito del desarrollo de software.',
             subtitle: 'Ingeniero en Sistemas Computacionales',
-            gradient: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
+            gradient: 'linear-gradient(135deg,rgb(123, 222, 164) 0%, rgb(156, 196, 225) 100%)'
         }
     ];
 

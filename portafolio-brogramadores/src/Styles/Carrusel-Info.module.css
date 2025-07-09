@@ -2,8 +2,8 @@
 
 /* Variables CSS para mejor mantenimiento */
 :root {
-    --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1e293b 100%);
-    --card-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary-gradient: linear-gradient(135deg, #2e478b 0%, #6bd6a0 50%, #1e3b2c 100%);
+    --card-gradient: linear-gradient(135deg, #667eea 0%, #4845f2 100%);
     --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     --white-gradient: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
     --shadow-light: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -90,30 +90,28 @@ body {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    
 }
 
-/* Carrusel principal */
+/* Carrusel principal - MEJORADO CON PADDING PARA CONTROLES */
 .miCarrusel {
     width: 100%;
     margin: 0;
-    padding: 0 clamp(0.5rem, 3vw, 3rem);
+    padding: 0 clamp(2rem, 5vw, 4rem); /* Más espacio para los controles */
     position: relative;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    /* Añadimos espacio inferior para los indicadores */
-    margin-bottom: clamp(55px, 12vw, 80px);
+    margin-bottom: clamp(60px, 15vw, 80px);
 }
 
 /* Contenedor principal del carrusel */
 .carouselContainer {
-    height: clamp(280px, 50vh, 600px);
+    height: clamp(320px, 55vh, 650px);
     width: 100%;
     margin: 0;
-    padding: clamp(0.8rem, 2.5vw, 2rem) 0;
+    padding: clamp(1rem, 3vw, 2rem) 0;
     position: relative;
     overflow: hidden;
 }
@@ -146,7 +144,7 @@ body {
     padding: var(--card-gap);
 }
 
-/* Card personalizada */
+/* Card personalizada - MEJORADA PARA RESPONSIVIDAD */
 .customCard {
     display: flex;
     width: 100%;
@@ -168,7 +166,7 @@ body {
     box-shadow: var(--shadow-medium);
 }
 
-/* Sección de imagen de la card */
+/* Sección de imagen - COMPLETAMENTE REDISEÑADA */
 .cardImageSection {
     flex: 0 0 45%;
     height: 100%;
@@ -176,7 +174,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(0.3rem, 1.5vw, 1rem);
+    padding: clamp(0.5rem, 2vw, 1.5rem);
     overflow: hidden;
     position: relative;
     min-height: 0;
@@ -189,51 +187,52 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
     z-index: 1;
 }
 
-/* Imagen dentro de la card - MEJORADA PARA RESPONSIVE */
+/* NUEVA SOLUCIÓN PARA IMÁGENES - OBJECT-FIT INTELIGENTE */
 .cardImage {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Cambio clave: de cover a contain */
     object-position: center;
     display: block;
-    border-radius: calc(var(--border-radius) * 0.7);
+    border-radius: calc(var(--border-radius) * 0.6);
     transition: var(--transition);
     position: relative;
     z-index: 2;
-    filter: brightness(1.1) contrast(1.1);
-    /* Asegurar que la imagen se adapte correctamente */
+    filter: brightness(1.05) contrast(1.05);
     max-width: 100%;
     max-height: 100%;
+    /* Fondo para imágenes que no llenen completamente el espacio */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
 }
 
 .cardImage:hover {
     transform: scale(1.02);
+    filter: brightness(1.1) contrast(1.1);
 }
 
-/* Sección de contenido de la card - MEJORADA PARA SCROLL */
+/* Sección de contenido - SCROLL MEJORADO */
 .cardContentSection {
     flex: 1;
-    padding: clamp(0.8rem, 2.5vw, 2.5rem);
+    padding: clamp(1rem, 3vw, 2.5rem);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
     background: var(--white-gradient);
-    /* SCROLL MEJORADO */
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
     min-height: 0;
-    /* Scroll más suave */
     scrollbar-width: thin;
     scrollbar-color: rgba(102, 126, 234, 0.3) transparent;
 }
 
-/* Scrollbar personalizado para WebKit */
+/* Scrollbar personalizado */
 .cardContentSection::-webkit-scrollbar {
     width: clamp(3px, 0.5vw, 6px);
 }
@@ -267,14 +266,14 @@ body {
 
 /* Título de la card */
 .cardTitle {
-    margin-bottom: clamp(0.6rem, 1.8vw, 1.5rem);
-    font-size: clamp(0.9rem, 2.8vw, 1.5rem);
+    margin-bottom: clamp(0.6rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: 600;
     color: #1a202c;
     line-height: 1.3;
     font-family: 'Poppins', sans-serif;
     position: relative;
-    padding-left: clamp(0.6rem, 1.8vw, 1rem);
+    padding-left: clamp(0.8rem, 2vw, 1rem);
     word-wrap: break-word;
     hyphens: auto;
 }
@@ -286,28 +285,27 @@ body {
     top: 50%;
     transform: translateY(-50%);
     width: 3px;
-    height: clamp(12px, 2.5vw, 20px);
+    height: clamp(15px, 3vw, 20px);
     background: var(--card-gradient);
     border-radius: 2px;
 }
 
-/* Texto de la card - MEJORADO PARA SCROLL */
+/* Texto de la card */
 .cardText {
-    margin-bottom: clamp(0.4rem, 1.2vw, 1rem);
+    margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
     color: #4a5568;
     line-height: 1.6;
-    font-size: clamp(0.75rem, 1.8vw, 1rem);
+    font-size: clamp(0.8rem, 2vw, 1rem);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    padding-left: clamp(0.6rem, 1.8vw, 1rem);
+    padding-left: clamp(0.8rem, 2vw, 1rem);
     word-wrap: break-word;
     hyphens: auto;
-    /* Permitir que el texto se expanda */
     flex-shrink: 0;
 }
 
 .cardText:last-child {
-    margin-bottom: clamp(0.4rem, 1.2vw, 1rem);
+    margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
 }
 
 /* Texto pequeño */
@@ -316,62 +314,62 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+    font-size: clamp(0.7rem, 1.8vw, 0.85rem);
 }
 
 /* Barra de progreso */
 .progressBar {
-    margin-top: clamp(0.4rem, 1.2vw, 1rem);
+    margin-top: clamp(0.5rem, 1.5vw, 1rem);
     display: flex;
     align-items: center;
-    gap: clamp(3px, 1vw, 8px);
-    padding-left: clamp(0.6rem, 1.8vw, 1rem);
+    gap: clamp(4px, 1.2vw, 8px);
+    padding-left: clamp(0.8rem, 2vw, 1rem);
     flex-shrink: 0;
 }
 
 .progressSegment {
-    width: clamp(15px, 3vw, 30px);
-    height: clamp(2px, 0.5vw, 3px);
+    width: clamp(18px, 4vw, 30px);
+    height: clamp(3px, 0.8vw, 4px);
     border-radius: 2px;
     transition: var(--transition);
 }
 
-/* CONTROLES DEL CARRUSEL - MEJORADOS PARA RESPONSIVE */
+/* CONTROLES COMPLETAMENTE REDISEÑADOS */
 .carouselControlPrev,
 .carouselControlNext {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: clamp(30px, 5vw, 50px);
-    height: clamp(30px, 5vw, 50px);
+    width: clamp(35px, 6vw, 55px);
+    height: clamp(35px, 6vw, 55px);
     background: var(--card-gradient);
     border: none;
     border-radius: 50%;
-    font-size: clamp(12px, 2.5vw, 20px);
+    font-size: clamp(14px, 3vw, 24px);
     color: white;
     cursor: pointer;
-    z-index: 10;
+    z-index: 15;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: var(--transition);
-    opacity: 0.8;
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    opacity: 0.9;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
 }
 
 .carouselControlPrev {
-    left: clamp(-15px, -2.5vw, -25px);
+    left: clamp(0.5rem, 2vw, 1rem);
 }
 
 .carouselControlNext {
-    right: clamp(-15px, -2.5vw, -25px);
+    right: clamp(0.5rem, 2vw, 1rem);
 }
 
 .carouselControlPrev:hover,
 .carouselControlNext:hover {
     opacity: 1;
     transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
 }
 
 .carouselControlPrev:active,
@@ -381,61 +379,62 @@ body {
 
 .carouselControlPrev::before {
     content: "←";
-    font-size: clamp(14px, 3vw, 24px);
+    font-size: clamp(16px, 3.5vw, 28px);
     font-weight: bold;
 }
 
 .carouselControlNext::before {
     content: "→";
-    font-size: clamp(14px, 3vw, 24px);
+    font-size: clamp(16px, 3.5vw, 28px);
     font-weight: bold;
 }
 
-/* INDICADORES DEL CARRUSEL - SOLUCIONADO SOBREPOSICIÓN */
+/* INDICADORES MEJORADOS */
 .carouselIndicators {
     position: absolute;
-    bottom: clamp(-55px, -8vw, -60px);
+    bottom: clamp(-55px, -10vw, -60px);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(6px, 1.5vw, 15px);
+    gap: clamp(8px, 2vw, 15px);
     margin: 0;
-    padding: clamp(5px, 1vw, 10px);
+    padding: clamp(8px, 1.5vw, 12px);
     list-style: none;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    /* Prevenir sobreposición */
-    z-index: 5;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .carouselIndicator {
-    width: clamp(8px, 2vw, 15px);
-    height: clamp(8px, 2vw, 15px);
-    background: rgba(255, 255, 255, 0.3);
+    width: clamp(10px, 2.5vw, 15px);
+    height: clamp(10px, 2.5vw, 15px);
+    background: rgba(255, 255, 255, 0.4);
     border: 1px solid rgba(102, 126, 234, 0.5);
     border-radius: 50%;
     cursor: pointer;
     transition: var(--transition);
-    opacity: 0.6;
+    opacity: 0.7;
     flex-shrink: 0;
 }
 
 .carouselIndicator:hover {
     opacity: 1;
-    background: rgba(102, 126, 234, 0.3);
+    background: rgba(102, 126, 234, 0.4);
     transform: scale(1.2);
-    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
 .carouselIndicator.active {
     background: var(--card-gradient);
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.15);
     border-color: #667eea;
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.4);
 }
 
 .carouselIndicator:focus {
@@ -444,28 +443,28 @@ body {
 
 /* Información adicional */
 .teamInfo {
-    margin-top: clamp(1.5rem, 4vw, 1.5rem);
+    margin-top: clamp(2rem, 5vw, 3rem);
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: var(--border-radius);
-    padding: clamp(1rem, 2.5vw, 2rem);
+    padding: clamp(1.5rem, 3vw, 2.5rem);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .teamInfoTitle {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.1rem, 2.8vw, 1.6rem);
     font-weight: 600;
     color: #1a202c;
-    margin-bottom: clamp(0.6rem, 1.5vw, 1rem);
+    margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
     font-family: 'Poppins', sans-serif;
 }
 
 .teamInfoText {
     color: #4a5568;
-    font-size: clamp(0.85rem, 2vw, 1.1rem);
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
     line-height: 1.6;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
 }
@@ -475,99 +474,13 @@ body {
 /* Pantallas ultra pequeñas (hasta 320px) */
 @media (max-width: 320px) {
     .miCarrusel {
-        padding: 0 0.3rem;
+        padding: 0 1rem;
         margin-bottom: 50px;
     }
     
     .carouselContainer {
-        height: clamp(250px, 45vh, 300px);
-        padding: 0.5rem 0;
-    }
-    
-    .customCard {
-        flex-direction: column;
-    }
-    
-    .cardImageSection {
-        flex: 0 0 35%;
-        height: 35%;
-        padding: 0.2rem;
-    }
-    
-    .cardContentSection {
-        height: 65%;
-        padding: 0.6rem;
-        overflow-y: auto;
-    }
-    
-    .cardTitle {
-        font-size: 0.85rem;
-        margin-bottom: 0.4rem;
-        padding-left: 0.4rem;
-    }
-    
-    .cardText {
-        font-size: 0.7rem;
-        line-height: 1.4;
-        padding-left: 0.4rem;
-    }
-    
-    .carouselIndicators {
-        bottom: -35px;
-        padding: 3px;
-        gap: 4px;
-    }
-    
-    .carouselIndicator {
-        width: 6px;
-        height: 6px;
-    }
-    
-    .carouselControlPrev,
-    .carouselControlNext {
-        width: 25px;
-        height: 25px;
-        font-size: 10px;
-    }
-}
-
-/* Móviles pequeños (321px - 480px) */
-@media (min-width: 321px) and (max-width: 480px) {
-    .miCarrusel {
-        margin-bottom: 55px;
-    }
-    
-    .carouselContainer {
-        height: clamp(300px, 48vh, 380px);
-    }
-    
-    .customCard {
-        flex-direction: column;
-    }
-    
-    .cardImageSection {
-        flex: 0 0 38%;
-        height: 38%;
-    }
-    
-    .cardContentSection {
-        height: 62%;
-        overflow-y: auto;
-    }
-    
-    .carouselIndicators {
-        bottom: -40px;
-    }
-}
-
-/* Móviles medianos (481px - 600px) */
-@media (min-width: 481px) and (max-width: 600px) {
-    .miCarrusel {
-        margin-bottom: 60px;
-    }
-    
-    .carouselContainer {
-        height: clamp(350px, 50vh, 420px);
+        height: 280px;
+        padding: 0.8rem 0;
     }
     
     .customCard {
@@ -577,22 +490,162 @@ body {
     .cardImageSection {
         flex: 0 0 40%;
         height: 40%;
+        padding: 0.4rem;
+    }
+    
+    .cardImage {
+        object-fit: contain;
+        border-radius: 8px;
     }
     
     .cardContentSection {
         height: 60%;
+        padding: 0.8rem;
         overflow-y: auto;
+    }
+    
+    .cardTitle {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        padding-left: 0.6rem;
+    }
+    
+    .cardText {
+        font-size: 0.75rem;
+        line-height: 1.5;
+        padding-left: 0.6rem;
+    }
+    
+    .carouselControlPrev,
+    .carouselControlNext {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    .carouselControlPrev {
+        left: 0.5rem;
+    }
+    
+    .carouselControlNext {
+        right: 0.5rem;
+    }
+    
+    .carouselIndicators {
+        bottom: -40px;
+        padding: 6px;
+        gap: 6px;
+    }
+    
+    .carouselIndicator {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Móviles pequeños (321px - 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+    .miCarrusel {
+        padding: 0 1.2rem;
+        margin-bottom: 55px;
+    }
+    
+    .carouselContainer {
+        height: 320px;
+    }
+    
+    .customCard {
+        flex-direction: column;
+    }
+    
+    .cardImageSection {
+        flex: 0 0 42%;
+        height: 42%;
+        padding: 0.6rem;
+    }
+    
+    .cardImage {
+        object-fit: contain;
+        border-radius: 10px;
+    }
+    
+    .cardContentSection {
+        height: 58%;
+        padding: 1rem;
+        overflow-y: auto;
+    }
+    
+    .carouselControlPrev,
+    .carouselControlNext {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .carouselControlPrev {
+        left: 0.6rem;
+    }
+    
+    .carouselControlNext {
+        right: 0.6rem;
+    }
+}
+
+/* Móviles medianos (481px - 600px) */
+@media (min-width: 481px) and (max-width: 600px) {
+    .miCarrusel {
+        padding: 0 1.5rem;
+        margin-bottom: 60px;
+    }
+    
+    .carouselContainer {
+        height: 360px;
+    }
+    
+    .customCard {
+        flex-direction: column;
+    }
+    
+    .cardImageSection {
+        flex: 0 0 45%;
+        height: 45%;
+        padding: 0.8rem;
+    }
+    
+    .cardImage {
+        object-fit: contain;
+        border-radius: 12px;
+    }
+    
+    .cardContentSection {
+        height: 55%;
+        padding: 1.2rem;
+        overflow-y: auto;
+    }
+    
+    .carouselControlPrev,
+    .carouselControlNext {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carouselControlPrev {
+        left: 0.8rem;
+    }
+    
+    .carouselControlNext {
+        right: 0.8rem;
     }
 }
 
 /* Tablets pequeñas (601px - 768px) */
 @media (min-width: 601px) and (max-width: 768px) {
     .miCarrusel {
+        padding: 0 2rem;
         margin-bottom: 65px;
     }
     
     .carouselContainer {
-        height: clamp(380px, 48vh, 480px);
+        height: 420px;
     }
     
     .customCard {
@@ -602,23 +655,45 @@ body {
     .cardImageSection {
         flex: 0 0 40%;
         height: 100%;
+        padding: 1rem;
+    }
+    
+    .cardImage {
+        object-fit: contain;
+        border-radius: 15px;
     }
     
     .cardContentSection {
         flex: 1;
         height: 100%;
+        padding: 1.5rem;
         overflow-y: auto;
+    }
+    
+    .carouselControlPrev,
+    .carouselControlNext {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .carouselControlPrev {
+        left: 1rem;
+    }
+    
+    .carouselControlNext {
+        right: 1rem;
     }
 }
 
 /* Tablets medianas (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .miCarrusel {
+        padding: 0 2.5rem;
         margin-bottom: 70px;
     }
     
     .carouselContainer {
-        height: clamp(420px, 52vh, 500px);
+        height: 480px;
     }
     
     .customCard {
@@ -627,47 +702,63 @@ body {
     
     .cardImageSection {
         flex: 0 0 42%;
+        padding: 1.2rem;
+    }
+    
+    .cardImage {
+        object-fit: contain;
+        border-radius: 18px;
     }
     
     .cardContentSection {
+        padding: 2rem;
         overflow-y: auto;
+    }
+    
+    .carouselControlPrev,
+    .carouselControlNext {
+        width: 50px;
+        height: 50px;
     }
 }
 
-/* Laptops pequeñas (1025px - 1200px) */
-@media (min-width: 1025px) and (max-width: 1200px) {
+/* Laptops y pantallas grandes (1025px+) */
+@media (min-width: 1025px) {
     .miCarrusel {
+        padding: 0 3rem;
         margin-bottom: 75px;
     }
     
     .carouselContainer {
-        height: clamp(450px, 48vh, 520px);
-    }
-    
-    .cardImageSection {
-        flex: 0 0 44%;
-    }
-}
-
-/* Pantallas grandes (1201px+) */
-@media (min-width: 1201px) {
-    .miCarrusel {
-        margin-bottom: 80px;
-    }
-    
-    .carouselContainer {
-        height: clamp(480px, 45vh, 600px);
+        height: 550px;
     }
     
     .cardImageSection {
         flex: 0 0 45%;
+        padding: 1.5rem;
+    }
+    
+    .cardImage {
+        object-fit: contain;
+        border-radius: 20px;
+    }
+    
+    .cardContentSection {
+        padding: 2.5rem;
+        overflow-y: auto;
+    }
+    
+    .carouselControlPrev,
+    .carouselControlNext {
+        width: 55px;
+        height: 55px;
     }
 }
 
-/* Orientación horizontal específica para móviles */
+/* Orientación horizontal para móviles */
 @media (max-height: 500px) and (orientation: landscape) and (max-width: 900px) {
     .carouselContainer {
-        height: clamp(200px, 65vh, 300px);
+        height: 250px;
     }
     
     .customCard {
@@ -675,26 +766,32 @@ body {
     }
     
     .cardImageSection {
-        flex: 0 0 40%;
+        flex: 0 0 35%;
         height: 100%;
+        padding: 0.5rem;
+    }
+    
+    .cardImage {
+        object-fit: contain;
+        border-radius: 8px;
     }
     
     .cardContentSection {
         flex: 1;
         height: 100%;
-        padding: clamp(0.6rem, 1.5vw, 1.2rem);
+        padding: 1rem;
         overflow-y: auto;
     }
     
     .cardTitle {
-        font-size: clamp(0.8rem, 2vw, 1rem);
-        margin-bottom: 0.3rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
     }
     
     .cardText {
-        font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-        line-height: 1.3;
-        margin-bottom: 0.3rem;
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin-bottom: 0.4rem;
     }
     
     .miCarrusel {
@@ -703,6 +800,12 @@ body {
     
     .carouselIndicators {
         bottom: -35px;
+    }
+    
+    .carouselControlPrev,
+    .carouselControlNext {
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -804,18 +907,18 @@ body {
     .carouselControlPrev:hover,
     .carouselControlNext:hover {
         transform: translateY(-50%);
-        opacity: 0.8;
-        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        opacity: 0.9;
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
     }
     
     .carouselIndicator:hover {
         transform: none;
-        opacity: 0.6;
+        opacity: 0.7;
         box-shadow: none;
     }
     
     .carouselIndicator.active {
-        transform: none;
+        transform: scale(1.1);
     }
     
     .cardImage:hover {
@@ -844,6 +947,6 @@ body {
     }
     
     .miCarrusel {
-        margin-bottom: 0;
+        margin-bottom: 0
     }
 }
