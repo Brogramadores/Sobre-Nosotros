@@ -77,7 +77,7 @@ function Contactanos() {
   return (
     <div className={styles.Contactanos}>
       <div className={styles.contenedorPrincipal}>
-        <header className={styles.headerNavbar}>
+        <header>
           <Navbar/>
         </header>
         

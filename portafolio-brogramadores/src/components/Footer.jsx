@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import styles from '../Styles/Footer.module.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -9,6 +10,13 @@ function Footer() {
         // Actualizar el año automáticamente
         setCurrentYear(new Date().getFullYear());
     }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Scroll suave
+        });
+    };
 
     return (
         <footer className={styles.footer} ref={footerRef}>
@@ -52,10 +60,10 @@ function Footer() {
                     <div className={styles.footerSection}>
                         <h4 className={styles.footerSubtitle}>Enlaces Rápidos</h4>
                         <ul className={styles.footerLinks}>
-                            <li><a href="#inicio" className={styles.footerLink}>Inicio</a></li>
-                            <li><a href="#servicios" className={styles.footerLink}>Servicios</a></li>
-                            <li><a href="#nosotros" className={styles.footerLink}>Nosotros</a></li>
-                            <li><a href="#proyectos" className={styles.footerLink}>Proyectos</a></li>
+                            <li><Link className={styles.footerLink} to="/" onClick={scrollToTop}>Inicio</Link></li>
+                            <li><Link className={styles.footerLink} to="/proyectos" onClick={scrollToTop}>Nuestros Proyectos</Link></li>
+                            <li><Link className={styles.footerLink} to="/redes-sociales" onClick={scrollToTop}>Redes Sociales</Link></li>
+                            <li><Link className={styles.footerLink} to="/contactanos" onClick={scrollToTop}>Contactanos</Link></li>
                         </ul>
                     </div>
 
