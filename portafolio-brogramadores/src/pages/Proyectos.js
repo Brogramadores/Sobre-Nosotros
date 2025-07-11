@@ -14,7 +14,7 @@ const Proyectos = () => {
             img: brogramadores,
             title: 'Portafolio Brogramadores',
             descripcion: 'Portafolio del equipo Brogramadores para mostrar sus habilidades y proyectos',
-            tecnologias: ['React', 'Node.js', 'EmailJs', 'Bootstrap, Css'],
+            tecnologias: ['React', 'Node.js', 'EmailJs', 'Bootstrap', 'Css'],
             github: 'https://github.com/Brogramadores/Sobre-Nosotros',
             demo: 'https://brogramadores.github.io/Sobre-Nosotros/',
             estado: 'Terminado'
