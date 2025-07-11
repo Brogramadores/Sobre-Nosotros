@@ -2,51 +2,48 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import styles from '../Styles/ProyectosBro.module.css';
-import proyecto1 from '../img/proyecto1.jpg';
-import proyecto2 from '../img/proyecto2.jpg';
-import proyecto3 from '../img/proyecto3.jpg';
-import proyecto4 from '../img/proyecto4.jpg';
-import proyecto5 from '../img/proyecto5.jpg';
-import proyecto6 from '../img/proyecto6.jpg';
+
 import construccion from '../img/construccion.png';
+import brogramadores from '../img/Brogramadores.jpg';
+import sol from '../img/sol.jpg';
 import { Link } from 'react-router-dom';
 
 const ProyectosBro = () => {
   const projects = [
     {
       id: 1,
-      img: construccion,
-      title: 'Portafolio',
-      github: 'https://github.com/Brogramadores',
+      img: brogramadores,
+      title: 'Portafolio Brogramadores',
+      github: 'https://github.com/Brogramadores/Sobre-Nosotros',
     },
     {
       id: 2,
-      img: construccion,
-      title: 'Proyecto 2',
-      github: 'https://github.com/Brogramadores',
+      img: sol,
+      title: 'Pagina Sol del Centro (En desarrollo)',
+      github: 'https://github.com/Brogramadores/Sol-Del-Centro',
     },
     {
       id: 3,
       img: construccion,
-      title: 'Proyecto 3',
+      title: 'Proximamente',
       github: 'https://github.com/Brogramadores',
     },
     {
       id: 4,
       img: construccion,
-      title: 'Proyecto 4',
+      title: 'Proximamente',
       github: 'https://github.com/Brogramadores',
     },
     {
       id: 5,
       img: construccion,
-      title: 'Proyecto 5',
+      title: 'Proximamente',
       github: 'https://github.com/Brogramadores',
     },
     {
       id: 6,
       img: construccion,
-      title: 'Proyecto 6',
+      title: 'Proximamente',
       github: 'https://github.com/Brogramadores',
     },
   ];

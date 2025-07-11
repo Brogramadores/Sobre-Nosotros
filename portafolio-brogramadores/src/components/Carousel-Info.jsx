@@ -32,7 +32,7 @@ function CarruselInfo() {
             id: 'esau',
             image: Esau,
             title: 'Jose Esau Tovar Cruz',
-            description: 'Recién egresado de la Universidad Autónoma de Aguascalientes, con conocimientos en programación estructurada y orientada a objetos. Manejo de bases de datos, fundamentos de redes y nociones en ciberseguridad. Experiencia en desarrollo web y móvil, apoyado en frameworks actuales para la creación de aplicaciones funcionales y eficientes. Motivado para enfrentar nuevos retos y crecer profesionalmente en el ámbito del desarrollo de software.',
+            description: 'Ingeniero recién egresado de la Universidad Autónoma de Aguascalientes, con conocimientos en programación estructurada y orientada a objetos. Manejo de bases de datos, fundamentos de redes y nociones en ciberseguridad. Experiencia en desarrollo web y móvil, apoyado en frameworks actuales para la creación de aplicaciones funcionales y eficientes. Motivado para enfrentar nuevos retos y crecer profesionalmente en el ámbito del desarrollo de software.',
             subtitle: 'Ingeniero en Sistemas Computacionales',
             gradient: 'linear-gradient(135deg,rgb(123, 222, 164) 0%, rgb(156, 196, 225) 100%)'
         }
